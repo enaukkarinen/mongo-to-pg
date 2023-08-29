@@ -1,9 +1,8 @@
 import { MongoClient } from "mongodb";
-import { Client } from "pg";
 
-import { mapLettingMerged } from "./utilities/mapLettingMerged";
-import { upsertToPostgres } from "./utilities/upsertToPostgres";
-import config from "./config";
+import { mapLettingMerged } from "./mappers/mapLettingMerged";
+
+import { createLettingMerged } from "./lettingMergedRepository";
 
 let db;
 async function getMongoDB(connectionString: string) {
@@ -35,21 +34,20 @@ export async function seed(options: SeedOptions) {
 
   console.log(`\nTotal documents: ${count}`);
 
-  const pgClient = new Client(config.postgres);
-  await pgClient.connect();
-
   try {
     for await (const doc of cursor) {
       const mapped = mapLettingMerged(doc);
 
       counter += 1;
-      process.stdout.write(`\rDocuments inserted: ${counter}`);
+      process.stdout.write(
+        `\rDocuments inserted: ${counter}. Insert document id ${mapped.id}`
+      );
 
-      await upsertToPostgres(pgClient, mapped);
+      await createLettingMerged(mapped);
     }
   } catch (error) {
     console.error(error);
   } finally {
-    await pgClient.end();
+    console.log("\nDone");
   }
 }

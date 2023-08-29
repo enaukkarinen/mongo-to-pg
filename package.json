@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "env-cmd -f .env ts-node-dev --respawn --transpile-only src/app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run-seed": "env-cmd -f .env ts-node-dev --respawn --transpile-only src/scripts/run-seed.ts",
+    "run-query": "env-cmd -f .env ts-node-dev --respawn --transpile-only src/scripts/run-query.ts",
+    "run-geospacial-query": "env-cmd -f .env ts-node-dev --respawn --transpile-only src/scripts/run-geospacial-query.ts",
+    "kysely-codegen": "kysely-codegen  --include-pattern letting_merged --out-file ./src/type/database.interface.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,10 +16,12 @@
     "@types/node": "^16.18.38",
     "@types/pg": "^8.10.2",
     "env-cmd": "^10.1.0",
+    "kysely-codegen": "^0.10.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "kysely": "^0.26.1",
     "mongodb": "^4.11.0",
     "pg": "^8.11.1",
     "tslib": "^2.5.0"

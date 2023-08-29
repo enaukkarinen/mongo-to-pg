@@ -1,0 +1,72 @@
+{
+    "_id" : "45ea49a6-fd95-4e1f-bb17-f6535a7a8276",
+    "members" : [
+        "45ea49a6-fd95-4e1f-bb17-f6535a7a8276"
+    ],
+    "transactionDate" :"2020-11-24T00:00:00.000+0000",
+    "onMarketDate" :"2019-05-09T00:00:00.000+0000",
+    "timeToDisposal" : 564,
+    "displayAddress" : "19-23 Deerdykes View, Westfield Industrial Estate, Cumbernauld, Glasgow, G68 9HN",
+    "lease" : {
+        "type" : "Lease",
+        "isPreLet" : false,
+        "leaseLength" : 5,
+        "leaseStartDate" :"2020-11-05T00:00:00.000+0000",
+        "leaseEndDate" :"2025-11-04T00:00:00.000+0000",
+        "rent" : {
+            "sqFt" : 5,
+            "perAnnum" : 54095,
+            "sqM" : 53.821313240043054
+        }
+    },
+    "unit" : {
+        "totalSpace" : {
+            "sqFt" : 10819,
+            "sqM" : 1005.0851
+        },
+        "gradeOfSpaceType" : "Grade A/New",
+        "primaryUseType" : {
+            "parentCategoryCode" : "S3",
+            "useTypeCode" : "S3U6",
+            "displayName" : "Industrial (B1/2/8) - Mixed Industrial - B1, B2, B8",
+            "name" : "Mixed Industrial - B1, B2, B8",
+            "sector" : "Industrial (B1/2/8)",
+            "category" : "Industrial / Distribution",
+            "parentCategory" : "Industrial"
+        },
+        "measurementType" : "GIA"
+    },
+    "meta" : {
+        "referenceId" : "45ea49a6-fd95-4e1f-bb17-f6535a7a8276",
+        "score" : 0,
+        "dm" : {
+            "accepted" : {
+                "timestamp" :"2020-11-24T11:42:02.589+0000"
+            },
+            "created" : {
+                "userId" : "8449a875-a216-45cc-b881-fdd0d1e2b500",
+                "isSystemUser" : false,
+                "timestamp" :"2020-11-24T11:42:02.810+0000"
+            },
+            "updated" : {
+                "userId" : "8449a875-a216-45cc-b881-fdd0d1e2b500",
+                "isSystemUser" : false,
+                "timestamp" :"2021-02-11T13:35:48.354+0000"
+            }
+        },
+        "created" :"2020-11-24T11:42:02.997+0000",
+        "updated" :"2021-08-18T16:52:00.358+0000"
+    },
+    "property" : {
+        "propertyId" : "1415644c-5a73-4ae7-b536-2d053734d55d",
+        "uprn" : "118011439",
+        "usrn" : 48406803,
+        "geocode" : {
+            "coordinates" : [
+                -4.0532243,
+                55.9289019
+            ],
+            "type" : "Point"
+        }
+    }
+}
